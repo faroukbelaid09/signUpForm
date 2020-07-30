@@ -1,0 +1,156 @@
+:root {
+  --backgroung-color: hsl(0, 100%, 74%);
+  --trail-color: hsl(248, 32%, 49%);
+  --white-color: white;
+  --box-shadow-color: rgba(0, 0, 0, 0.2);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --red-color: red;
+  --green-color: hsl(154, 59%, 51%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 4rem 8rem;
+  background: var(--backgroung-color) url("images/bg-intro-desktop.png");
+  font-family: "Poppins", sans-serif;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-child {
+  width: 100%;
+  color: var(--white-color);
+}
+.left-child h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.right-child {
+  width: 100%;
+}
+
+.trial {
+  color: var(--white-color);
+  font-weight: 100;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  background: var(--trail-color);
+  text-align: center;
+  box-shadow: var(--box-shadow-color) 0px 10px 0px;
+}
+.trial span {
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.input-container {
+  padding: 3rem;
+  background: var(--white-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-color) 0 10px 0;
+}
+
+input {
+  appearance: none;
+  display: block;
+  margin: 0.3rem 0;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--grayish-blue);
+  width: 100%;
+}
+
+input::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.form-controller {
+  position: relative;
+}
+
+.form-controller .error-img {
+  visibility: hidden;
+  position: absolute;
+  right: 1rem;
+  bottom: 4rem;
+}
+
+.form-controller .error-msg {
+  visibility: hidden;
+  color: var(--red-color);
+  text-align: right;
+  margin: 0;
+}
+
+.form-controller.error .error-img,
+.form-controller.error .error-msg {
+  visibility: visible;
+}
+
+.form-controller.error input {
+  border: 1px solid var(--red-color);
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1.3rem;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  color: var(--white-color);
+  background: var(--green-color);
+  box-shadow: inset -3px -3px 1px var(--box-shadow-color);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.term-and-service {
+  color: var(--grayish-blue);
+}
+
+.term-and-service a {
+  color: var(--backgroung-color);
+}
+
+footer {
+  margin-top: 5rem;
+  text-align: center;
+  color: var(--white-color);
+}
+
+footer a {
+  color: var(--trail-color);
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 2.5rem;
+  }
+  .parent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-child p {
+    margin-bottom: 1rem;
+  }
+
+  .input-container {
+    padding: 2rem;
+  }
+}
